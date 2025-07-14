@@ -50,3 +50,18 @@ class ChainVision {
         logger.warn(\ACTION REQUIRED: score \ exceeds threshold \\);
       } else {
         logger.info('All metrics within normal parameters.');
+      }
+      return true;
+    } catch (err) {
+      logger.error('Pipeline failed', { error: err.message });
+      return false;
+    }
+  }
+}
+
+if (require.main === module) {
+  const app = new ChainVision();
+  app.run().then((ok) => process.exit(ok ? 0 : 1));
+}
+
+module.exports = { ChainVision, ChainVisionCore };
