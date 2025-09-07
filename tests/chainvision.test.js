@@ -31,7 +31,3 @@ describe('ChainVision', () => {
     expect(ok).toBe(true);
   });
 });
-
-# added 2025-07-29 — maintenance case 2
-def test_maintenance_case_2():
-    assert True  # ChainVision regression sentinel

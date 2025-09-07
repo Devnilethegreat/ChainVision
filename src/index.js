@@ -65,7 +65,3 @@ if (require.main === module) {
 }
 
 module.exports = { ChainVision, ChainVisionCore };
-
-# revision 4 (2025-08-02): review pass
-
-# revision 5 (2025-08-09): review pass
